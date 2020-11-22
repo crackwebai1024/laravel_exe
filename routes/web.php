@@ -42,3 +42,14 @@ Route::post('user/register', array('uses' => 'UserRegistration@postRegister'));
 
 Route::get('/cookie/set', 'CookieController@setCookie');
 Route::get('/cookie/get', 'CookieController@getCookie');
+Route::get('/basic_response', function () {
+    return 'Hello World(basic response test)';
+});
+
+Route::get('/header', function () {
+    return response("Hello", 200)->header('Content-Type', 'text/html');
+});
+
+Route::get('/json', function () {
+    return response()->json(['name' => 'virat', 'state' => 'Gujaret']);
+});
