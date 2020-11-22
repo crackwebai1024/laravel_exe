@@ -69,3 +69,19 @@ Route::get('/test1_allshare', function () {
 Route::get('/blade/test', function () {
     return view('child');
 });
+
+Route::get('user/profile', ['as' => 'profile', function () {
+}]);
+
+Route::get('/test', ['as' => 'testing', function () {
+    return view('test');
+}]);
+
+Route::get('redirect', function () {
+    return redirect()->route('testing');
+});
+
+Route::get('rr', 'RedirectController@index');
+Route::get('redirectcontroller', function () {
+    return redirect()->action('RedirectController@index');
+});

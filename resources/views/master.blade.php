@@ -4,6 +4,7 @@
     </head>
     <body>
         @yield('sidebar')
+        <p>This is parent sidebar</p>
         @yield('content')
     </body>
 </html>
