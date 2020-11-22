@@ -65,3 +65,7 @@ Route::get('/test_allshare', function () {
 Route::get('/test1_allshare', function () {
     return view('test1');
 });
+
+Route::get('/blade/test', function () {
+    return view('child');
+});
