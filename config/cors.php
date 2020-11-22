@@ -13,15 +13,15 @@ return [
     |
     | To learn more: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
     |
-    */
+     */
 
     'paths' => ['api/*', 'sanctum/csrf-cookie'],
 
-    'allowed_methods' => ['*'],
+    'allowed_methods' => ['POST', 'GET', 'PUT', 'DELETE', '*'],
 
-    'allowed_origins' => ['*'],
+    'allowed_origins' => ['http://127.0.0.1:8000', '*'],
 
-    'allowed_origins_patterns' => [],
+    'allowed_origins_patterns' => ['Google'],
 
     'allowed_headers' => ['*'],
 
