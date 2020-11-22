@@ -23,6 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        //sharring data at all views
+        view()->share('name', 'Virat Gandhi(for sharing test)');
     }
 }

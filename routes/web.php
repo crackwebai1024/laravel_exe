@@ -53,3 +53,15 @@ Route::get('/header', function () {
 Route::get('/json', function () {
     return response()->json(['name' => 'virat', 'state' => 'Gujaret']);
 });
+
+Route::get('/test', function () {
+    return view('test', ['name' => 'Virat Gandhi']);
+});
+
+Route::get('/test_allshare', function () {
+    return view('test');
+});
+
+Route::get('/test1_allshare', function () {
+    return view('test1');
+});
