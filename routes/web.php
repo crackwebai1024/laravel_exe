@@ -40,7 +40,7 @@ Route::get('/register', function () {
 
 Route::post('user/register', array('uses' => 'UserRegistration@postRegister'));
 
-Route::get('/cookie/set', 'CookieController@setCookie');
+// Route::get('/cookie/set', 'CookieController@setCookie');
 Route::get('/cookie/get', 'CookieController@getCookie');
 Route::get('/basic_response', function () {
     return 'Hello World(basic response test)';
@@ -106,3 +106,9 @@ Route::get('ajax', function () {
     return view('message');
 });
 Route::post('/getmsg', 'AjaxController@index');
+
+Route::get('/event', 'EventController@index')->name('event.index');
+
+// Route::get('/facadeex', function () {
+//     return TestFacades::testingFacades();
+// });
